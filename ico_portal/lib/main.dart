@@ -54,14 +54,30 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: true,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // TODO: Implement login functionality
-                String email = _emailController.text;
-                String password = _passwordController.text;
-                print('Email: $email, Password: $password');
-              },
-              child: const Text('Login'),
+            Row(
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // TODO: Implement login functionality
+                    String email = _emailController.text;
+                    String password = _passwordController.text;
+                    print('Email: $email, Password: $password');
+                  },
+                  child: const Text('Login'),
+                ),
+                const SizedBox(width: 20,),
+                ElevatedButton(
+                  onPressed: () {
+                    // TODO: Implement login functionality
+                    String email = _emailController.text;
+                    String password = _passwordController.text;
+                    print('Email: $email, Password: $password');
+                  },
+                  child: const Text('Register'),
+                ),
+              ],
             ),
           ],
         ),
